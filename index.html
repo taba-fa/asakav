@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082d55">
+  <meta name="description" content="آساکاو؛ مشاور و پیمانکار پروژه‌های صنعتی و عمرانی. از ایده تا واقعیت، همراه پروژه‌های ملی و زیرساختی ایران.">
+  <title>آساکاو | مهندسی، مشاوره و اجرا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1536px',
+          '2xl': '1660px',
+        },
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'Tahoma', 'sans-serif']
+          },
+          colors: {
+            asa: {
+              navy: '#082d55',
+              deep: '#061e38',
+              blue: '#1c5d8f',
+              pale: '#eaf3f9',
+              pale2: '#dcebf5',
+              orange: '#ef7f29',
+              ink: '#142a40',
+              muted: '#667789'
+            }
+          },
+          boxShadow: {
+            editorial: '0 20px 60px rgba(4, 30, 57, .12)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./projects-section.css">
+</head>
+<body class="bg-white font-sans text-asa-ink antialiased" dir="rtl">
+  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+
+  <!-- Header -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/15 text-white transition-all duration-300">
+    <div class="mx-auto flex h-[78px] max-w-[1900px] items-center justify-between gap-5 px-5 md:px-8 2xl:px-14">
+      <a href="#home" class="brand flex shrink-0 items-center gap-3" aria-label="آساکاو، صفحه اصلی">
+        <img src="images/logo.png" class="h-12 w-12 flex shrink-0 items-center gap-3" aria-label="آساکاو، صفحه اصلی">
+        <span class="block leading-tight">
+          <strong class="block text-[25px] font-black tracking-tight">آساکاو</strong>
+          <small class="mt-1 block text-[15px] 2xl:text-sm font-medium text-current/75">خدمات جامع مهندسی صنایع</small>
+        </span>
+      </a>
+
+      <nav id="desktop-nav" class="hidden items-center gap-7 lg:flex" aria-label="منوی اصلی">
+        <a class="nav-link" href="#home">صفحه اصلی</a>
+        <a class="nav-link" href="#about">درباره ما</a>
+        <a class="nav-link" href="#industries">حوزه‌های فعالیت</a>
+        <a class="nav-link" href="#projects">پروژه‌ها</a>
+        <a class="nav-link" href="#news">اخبار</a>
+        <a class="nav-link" href="#contact">تماس با ما</a>
+      </nav>
+
+      <div class="flex shrink-0 items-center gap-3">
+        <button id="search-toggle" class="icon-action hidden sm:grid" type="button" aria-label="نمایش جستجو" aria-expanded="false">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+        </button>
+        <span class="hidden h-6 w-px bg-current/25 sm:block"></span>
+        <span class="hidden text-xs font-semibold tracking-wide sm:block" lang="en">FA</span>
+        <button id="menu-toggle" class="icon-action lg:hidden" type="button" aria-label="باز کردن منو" aria-expanded="false">
+          <svg id="menu-icon" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <form id="search-panel" class="hidden border-t border-white/15 bg-asa-deep/95 px-5 py-4" role="search">
+      <div class="mx-auto flex max-w-4xl gap-3">
+        <input id="site-search" class="min-w-0 flex-1 border border-white/25 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60 outline-none focus:border-asa-orange" type="search" placeholder="جستجو در بخش‌های سایت..." aria-label="جستجو در سایت">
+        <button class="rounded-md bg-asa-orange px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-600" type="submit">جستجو</button>
+      </div>
+    </form>
+    <nav id="mobile-nav" class="hidden border-t border-white/10 bg-asa-deep px-5 pb-5 pt-3 lg:hidden" aria-label="منوی موبایل">
+      <a href="#home">صفحه اصلی</a><a href="#about">درباره ما</a><a href="#industries">حوزه‌های فعالیت</a><a href="#projects">پروژه‌ها</a><a href="#news">اخبار</a><a href="#contact">تماس با ما</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: image fallback remains visible when an optional local video is not present. -->
+    <section id="home" class="hero relative isolate flex min-h-[650px] items-center overflow-hidden bg-asa-deep text-white lg:min-h-[790px]">
+      <img id="hero-fallback" class="hero-fallback" src="https://asa-eng.com/wp-content/uploads/elementor/thumbs/Oil-and-gas-industry-qlkv6qjmfbxwgq98bj9jlfc5iek418aow087oe2p20.png" data-fallback="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2200&q=85" alt="نمایی از تأسیسات صنعتی و پالایشگاهی" fetchpriority="high">
+      <video id="hero-video" class="hero-video" autoplay muted loop playsinline poster="https://asa-eng.com/wp-content/uploads/elementor/thumbs/Oil-and-gas-industry-qlkv6qjmfbxwgq98bj9jlfc5iek418aow087oe2p20.png" aria-label="ویدیوی تأسیسات صنعتی">
+        <source src="./videos/industrial-hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-blueprint" aria-hidden="true"></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1900px] px-10 pb-16 pt-36 md:px-8 lg:pb-24 2xl:px-14">
+        <div class="max-w-3xl" data-reveal>
+          <div class="mb-12 flex items-center gap-3 text-base 2xl:text-lg font-semibold text-white/80"><span class="h-[2px] w-10 bg-asa-orange"></span> مهندسی، مشاوره و اجرا</div>
+          <h1 class="max-w-3xl text-5xl font-black leading-[1.25] tracking-tight md:text-7xl lg:text-[90px]">شرکت <span class="text-asa-orange">آساکاو</span></h1>
+          <p class="mt-8 mb-10 max-w-xl text-base leading-8 text-white/85 md:text-xl md:leading-10 2xl:text-2xl">مشاور و پیمانکار پروژه‌های صنعتی و عمرانی؛ از ایده تا واقعیت، همراه پروژه‌های ملی و زیرساختی ایران.</p>
+          <div class="mt-20 flex flex-wrap gap-3">
+            <a class="btn-primary 2xl:text-lg" href="#projects">مشاهده پروژه‌ها <span aria-hidden="true">←</span></a>
+            <a class="btn-outline 2xl:text-lg" href="#industries">حوزه‌های فعالیت</a>
+          </div>
+        </div>
+        <div class="hero-bottomline mt-32 flex flex-col gap-5 border-t border-white/25 pt-5 sm:flex-row sm:items-center sm:justify-between" data-reveal>
+          <p class="max-w-lg text-sm leading-7 text-white/70">راهکارهای مهندسی یکپارچه برای صنعت، انرژی و زیرساخت</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Stats -->
+    <section id="about" class="about-section bg-white py-16 md:py-20 xl:py-24">
+      <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+
+        <!-- Section introduction -->
+        <div
+          class="mb-20 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
+          data-reveal
+        >
+          <div>
+            <p class="section-kicker md:text-base xl:text-lg 2xl:text-xl">
+              <span></span>
+              درباره آساکاو
+            </p>
+
+            <h2 class="mt-6 mb-6 max-w-3xl text-2xl font-extrabold text-asa-ink md:text-4xl 2xl:text-5xl">
+              همراه مطمئن در مسیر
+              <br>
+              توسعه صنعت و زیرساخت
+            </h2>
+          </div>
+
+          <div>
+            <p class="mt-4 max-w-3xl text-base leading-8 text-slate-600 md:text-lg xl:max-w-[800px] 2xl:max-w-[920px] 2xl:text-2xl">
+              آساکاو با بهره‌گیری از دانش کارشناسان متخصص و بیش از یک دهه تجربه در پروژه‌های ملی و کلان، در عرصه مدیریت، طراحی، نظارت و اجرای پروژه‌های صنعتی و عمرانی فعالیت می‌کند. رعایت استانداردهای مهندسی، بهینه‌سازی طراحی‌ها و پایبندی به کیفیت، مبنای نگاه ما به هر پروژه است.
+            </p>
+
+            <a
+              class="text-link mt-5 inline-block md:text-base 2xl:text-xl"
+              href="https://asa-eng.com/"
+            >
+              آشنایی بیشتر با آساکاو
+              <span aria-hidden="true">←</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div
+          class="stats-panel grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 2xl:gap-6"
+          aria-label="آساکاو در یک نگاه"
+          data-reveal
+        >
+
+          <!-- Stat 1: People -->
+          <article class="stat-card group flex min-h-[170px] flex-col bg-[#f3f7fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-asa-pale hover:shadow-[0_12px_30px_rgba(8,45,85,0.08)] sm:min-h-[190px] sm:px-6 sm:py-7 xl:min-h-[210px] xl:px-10 xl:py-8 2xl:min-h-[235px] 2xl:px-8 2xl:py-8">
+            <strong
+              class="stat-number text-[42px] leading-none font-bold tracking-tight text-asa-navy sm:text-5xl xl:text-[56px] 2xl:text-[64px]"
+              data-count="221"
+              data-prefix="+"
+            >+221</strong>
+
+            <span class="mt-5 h-[2px] w-10 bg-asa-orange transition-all duration-300 group-hover:w-14" aria-hidden="true"></span>
+
+            <p class="mt-6 text-base font-semibold leading-7 text-asa-ink">
+              نیروی انسانی
+            </p>
+          </article>
+
+          <!-- Stat 2: Completed projects -->
+          <article class="stat-card group flex min-h-[170px] flex-col bg-[#f3f7fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-asa-pale hover:shadow-[0_12px_30px_rgba(8,45,85,0.08)] sm:min-h-[190px] sm:px-6 sm:py-7 xl:min-h-[210px] xl:px-10 xl:py-8 2xl:min-h-[235px] 2xl:px-8 2xl:py-8">
+            <strong
+              class="stat-number text-[42px] leading-none font-bold tracking-tight text-asa-navy sm:text-5xl xl:text-[56px] 2xl:text-[64px]"
+              data-count="263"
+              data-prefix="+"
+            >+263</strong>
+
+            <span class="mt-5 h-[2px] w-10 bg-asa-orange transition-all duration-300 group-hover:w-14" aria-hidden="true"></span>
+
+            <p class="mt-6 text-base font-semibold leading-7 text-asa-ink">
+              پروژه‌های انجام‌شده
+            </p>
+          </article>
+
+          <!-- Stat 3: Ongoing projects -->
+          <article class="stat-card group flex min-h-[170px] flex-col bg-[#f3f7fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-asa-pale hover:shadow-[0_12px_30px_rgba(8,45,85,0.08)] sm:min-h-[190px] sm:px-6 sm:py-7 xl:min-h-[210px] xl:px-10 xl:py-8 2xl:min-h-[235px] 2xl:px-8 2xl:py-8">
+            <strong
+              class="stat-number text-[42px] leading-none font-bold tracking-tight text-asa-navy sm:text-5xl xl:text-[56px] 2xl:text-[64px]"
+              data-count="38"
+            >38</strong>
+
+            <span class="mt-5 h-[2px] w-10 bg-asa-orange transition-all duration-300 group-hover:w-14" aria-hidden="true"></span>
+
+            <p class="mt-6 text-base font-semibold leading-7 text-asa-ink">
+              پروژه‌های جاری
+            </p>
+          </article>
+
+          <!-- Stat 4: Years of experience -->
+          <article class="stat-card group flex min-h-[170px] flex-col bg-[#f3f7fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-asa-pale hover:shadow-[0_12px_30px_rgba(8,45,85,0.08)] sm:min-h-[190px] sm:px-6 sm:py-7 xl:min-h-[210px] xl:px-10 xl:py-8 2xl:min-h-[235px] 2xl:px-8 2xl:py-8">
+            <strong
+              class="stat-number text-[42px] leading-none font-bold tracking-tight text-asa-navy sm:text-5xl xl:text-[56px] 2xl:text-[64px]"
+              data-count="10"
+            >10</strong>
+
+            <span class="mt-5 h-[2px] w-10 bg-asa-orange transition-all duration-300 group-hover:w-14" aria-hidden="true"></span>
+
+            <p class="mt-6 text-base font-semibold leading-7 text-asa-ink">
+              سال سابقه فعالیت
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries / solution explorer -->
+    <section id="industries" class="industries-section overflow-hidden bg-asa-deep py-16 text-white md:py-20">
+      <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+        <div class="pb-8 md:flex-row md:items-end md:justify-between" data-reveal>
+          <div><p class="section-kicker section-kicker-light text-base 2xl:text-lg"><span></span> حوزه‌های فعالیت</p><h2 class="mt-3 max-w-3xl text-2xl font-bold md:text-4xl">تخصص‌های متنوع، یک راهکار یکپارچه.</h2></div>
+        </div>
+        <div class="mt-5 mb-10 grid grid-cols-1 gap-px bg-white/15 sm:grid-cols-3">
+          <div class="industry-proof bg-asa-deep p-5 md:p-7"><span class="text-lg font-semibold text-asa-orange 2xl:text-xl">۰۱</span><h4 class="mt-3 text-xl font-extrabold 2xl:text-2xl">دانش چندرشته‌ای</h4><p class="mt-2 text-[16px] leading-7 text-white/75 2xl: text-lg">هم‌افزایی تخصص‌ها از طراحی تا اجرا.</p></div>
+          <div class="industry-proof bg-asa-deep p-5 md:p-7"><span class="text-lg font-semibold text-asa-orange 2xl:text-xl">۰۲</span><h4 class="mt-3 text-xl font-extrabold 2xl:text-2xl">توجه به جزئیات</h4><p class="mt-2 text-[16px] leading-7 text-white/75 2xl: text-lg">تصمیم‌های دقیق بر پایه استانداردهای مهندسی.</p></div>
+          <div class="industry-proof bg-asa-deep p-5 md:p-7"><span class="text-lg font-semibold text-asa-orange 2xl:text-xl">۰۳</span><h4 class="mt-3 text-xl font-extrabold 2xl:text-2xl">نتیجه ماندگار</h4><p class="mt-2 text-[16px] leading-7 text-white/75 2xl: text-lg">راهکارهایی برای ایمنی، بهره‌وری و دوام بیشتر.</p></div>
+        </div>
+
+        <div class="industry-feature grid grid-cols-1 bg-[#0c365f] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]" data-reveal>
+          <div class="industry-copy flex flex-col justify-center px-6 py-8 md:px-10 md:py-10 xl:px-14">
+            <div class="flex items-center justify-between gap-4"><span class="text-sm xl:text-base 2xl:text-lg font-semibold text-asa-orange mb-4" id="industry-eyebrow">حوزه تخصصی</span><span id="industry-count" class="text-sm text-[#0c365f]">۰۱ / ۰۵</span></div>
+            <h3 id="industry-title" class="mt-5 text-3xl font-extrabold leading-snug md:text-4xl mb-2">نفت، گاز و پتروشیمی</h3>
+            <p id="industry-description" class="mt-4 text-sm leading-8 text-white/80 md:text-[17px] 2xl:text-lg">طراحی و توسعه راهکارهای مهندسی یکپارچه برای تأسیسات، فرآیندها و زیرساخت‌های حیاتی انرژی.</p>
+            <ul id="industry-points" class="mt-5 space-y-3 text-sm text-white/80 md:text-[17px] 2xl:text-lg"><li>طراحی فرآیند و تجهیزات صنعتی</li><li>پایپینگ، تأسیسات و ابزار دقیق</li><li>مدیریت، نظارت و کنترل پروژه</li></ul>
+            <a id="industry-link" class="btn-primary mt-8 w-fit" href="https://asa-eng.com/services/petrochemical،petroleum-and-gas-industry/">مشاهده حوزه <span aria-hidden="true">←</span></a>
+          </div>
+          <div class="industry-image-panel relative min-h-[320px] overflow-hidden bg-slate-800 md:min-h-[460px] 2xl:min-h-[640px]">
+            <img id="industry-image" class="h-full min-h-[320px] w-full object-cover md:min-h-[460px] 2xl:min-h-[640px]" src="images/hero-1.webp" data-fallback="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1600&q=85" alt="حوزه نفت، گاز و پتروشیمی" loading="lazy">
+            <div class="industry-image-overlay"></div>
+            <div class="industry-image-note absolute bottom-5 right-5 flex items-center gap-3 text-sm font-semibold text-white md:bottom-8 md:right-8"><span class="h-[2px] w-8 bg-asa-orange"></span><span id="industry-image-caption">زیرساخت انرژی</span></div>
+          </div>
+        </div>
+
+        <!-- Industry tabs -->
+        <div
+          class="industry-tabs mt-12"
+          role="tablist"
+          aria-label="انتخاب حوزه فعالیت"
+        >
+          <button
+            class="industry-tab is-active md:text-[15px] 2xl:text-lg"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-industry="0"
+          >
+            نفت، گاز و پتروشیمی
+          </button>
+
+          <button
+            class="industry-tab md:text-[15px] 2xl:text-lg"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-industry="1"
+          >
+            فولاد
+          </button>
+
+          <button
+            class="industry-tab md:text-[15px] 2xl:text-lg"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-industry="2"
+          >
+            آب و برق
+          </button>
+
+          <button
+            class="industry-tab md:text-[15px] 2xl:text-lg"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-industry="3"
+          >
+            ساختمان
+          </button>
+
+          <button
+            class="industry-tab md:text-[15px] 2xl:text-lg"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-industry="4"
+          >
+            راه و راه‌آهن
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client organizations -->
+    <section
+      class="clients-section overflow-hidden border-b border-slate-200 bg-white py-9 md:py-16"
+      aria-label="کارفرمایان و سازمان‌های همکار"
+    >
+      <!-- Section heading -->
+      <div
+        class="place-self-center mb-12"
+        data-reveal
+      >
+        <h2 class="text-xl font-extrabold text-asa-ink md:text-2xl xl:text-3xl 2xl:text-4xl">
+          اعتماد کارفرمایان، سرمایه ماست.
+        </h2>
+
+      </div>
+
+
+      <!-- Continuous logo marquee -->
+      <div
+        class="clients-marquee"
+        dir="ltr"
+        aria-label="لوگوهای کارفرمایان و سازمان‌های همکار"
+      >
+        <div class="clients-marquee-track">
+
+          <!-- Original logo group -->
+          <div class="clients-marquee-group">
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-mobarakeh-logo.jfif"
+                alt="فولاد مبارکه"
+                title="فولاد مبارکه"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-jam-logo.jfif"
+                alt="پتروشیمی جم"
+                title="پتروشیمی جم"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-gas-logo.jfif"
+                alt="شرکت ملی گاز ایران"
+                title="شرکت ملی گاز ایران"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-tavanir-logo.jfif"
+                alt="توانیر"
+                title="توانیر"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-lavan-logo.jfif"
+                alt="پالایش نفت لاوان"
+                title="پالایش نفت لاوان"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="client-card">
+              <img
+                class="client-logo"
+                src="./images/client-rail-logo.jfif"
+                alt="راه‌آهن جمهوری اسلامی ایران"
+                title="راه‌آهن جمهوری اسلامی ایران"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+
+          <!-- Duplicate group for seamless looping -->
+          <div class="clients-marquee-group" aria-hidden="true">
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-mobarakeh-logo.jfif" alt="" loading="lazy">
+            </div>
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-jam-logo.jfif" alt="" loading="lazy">
+            </div>
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-gas-logo.jfif" alt="" loading="lazy">
+            </div>
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-tavanir-logo.jfif" alt="" loading="lazy">
+            </div>
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-lavan-logo.jfif" alt="" loading="lazy">
+            </div>
+
+            <div class="client-card">
+              <img class="client-logo" src="./images/client-rail-logo.jfif" alt="" loading="lazy">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects map -->
+    <section id="projects" class="projects-section bg-white py-16 md:py-24">
+      <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+        <div class="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between" data-reveal>
+          <div><p class="section-kicker text-base xl:text-lg"><span></span> پروژه‌ها</p><h2 class="mt-3 text-3xl font-extrabold leading-tight text-asa-ink md:text-4xl 2xl:text-4xl">تجربه‌ای که ساخته‌ایم.</h2></div>
+          <p class="max-w-[450px] text-sm leading-8 text-slate-600 md:text-base">بخشی از پروژه‌های منتخب آساکاو را روی نقشه ایران ببینید؛ با انتخاب هر نشان، جزئیات پروژه نمایش داده می‌شود.</p>
+        </div>
+
+        <div class="project-map-layout grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_370px] xl:grid-cols-[minmax(0,1fr)_390px]" data-reveal>
+          <div class="project-map-stage relative min-h-[400px] overflow-hidden md:min-h-[560px]">
+            <div class="map-grid" aria-hidden="true"></div>
+            <svg id="iran-project-map" class="iran-project-map absolute inset-0 h-full w-full" viewBox="0 0 760 560" role="img" aria-label="نقشه ایران و محل پروژه‌های آساکاو">
+              <defs>
+                <filter id="map-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="3" dy="7" stdDeviation="5" flood-color="#344d37" flood-opacity=".18"/></filter>
+                <linearGradient id="land-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9e5c6"/><stop offset="1" stop-color="#d7d2aa"/></linearGradient>
+              <clipPath id="iran-terrain-clip"><path id="iran-map-terrain-clip"></path></clipPath>
+              </defs>
+<path id="iran-map-shadow" fill="#7d8064" opacity=".18"></path>
+              <path id="iran-map-land" fill="url(#land-gradient)" filter="url(#map-shadow)"></path>
+              <!-- Local texture fallback, clipped to the Iran outline at runtime if the regional map image cannot load. -->
+              <image class="iran-terrain-image iran-terrain-fallback" href="./images/iran-terrain-relief.png" x="0" y="0" width="760" height="560" preserveAspectRatio="none" clip-path="url(#iran-terrain-clip)" aria-hidden="true"></image>
+              <!-- Regional shaded-relief base: shown unclipped so real coastlines and seas remain visible; Natural Earth map by Orijentolog, CC BY-SA 3.0. -->
+              <image class="iran-terrain-image iran-terrain-source" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Iran_relief_location_light_map.jpg" x="62.5" y="38" width="637.1" height="493.8" preserveAspectRatio="none" aria-hidden="true"></image>
+                            <g class="map-context" aria-hidden="true">
+                <text class="map-context-label map-water-label" x="309" y="91" text-anchor="middle">دریای خزر</text>
+                <text class="map-context-label map-water-label" x="338" y="446" text-anchor="middle">خلیج فارس</text>
+                <text class="map-context-label map-water-label" x="525" y="506" text-anchor="middle">دریای عمان</text>
+                <text class="map-context-label" x="118" y="290" text-anchor="middle">عراق</text>
+                <text class="map-context-label" x="655" y="288" text-anchor="middle">افغانستان</text>
+                <text class="map-context-label" x="666" y="412" text-anchor="middle">پاکستان</text>
+              </g>
+              <path id="iran-map-outline" fill="none" stroke="#aa9676" stroke-width="1.5" vector-effect="non-scaling-stroke"></path>
+              <g id="map-project-markers"></g>
+            </svg>
+            <div class="map-legend"><span class="map-legend-dot" aria-hidden="true"></span> پروژه‌های منتخب آساکاو</div>
+            <a class="map-source-credit" href="https://commons.wikimedia.org/wiki/File:Iran_relief_location_light_map.jpg" target="_blank" rel="noopener noreferrer">نقشه‌پایه: Natural Earth / Orijentolog · CC BY-SA 3.0</a>
+          </div>
+
+          <article id="project-map-card" class="project-map-card flex min-h-[300px] flex-col bg-white lg:min-h-0" aria-live="polite">
+            <div class="project-card-image relative h-48 overflow-hidden bg-slate-200 lg:h-[220px]">
+              <img id="project-card-image" src="./images/project-jam.jpg" data-fallback="https://asa-eng.com/wp-content/uploads/elementor/thumbs/Oil-and-gas-industry-qlkv6qjmfbxwgq98bj9jlfc5iek418aow087oe2p20.png" alt="تصویر پروژه منتخب" class="h-full w-full object-cover" loading="lazy">
+            </div>
+            <div class="project-card-content flex flex-1 flex-col p-5 md:p-6 xl:p-7">
+              <p class="project-card-overline text-sm md:text-[14px]"><span></span> پروژه منتخب</p>
+              <h3 id="project-card-title" class="mt-3 text-xl xl:text-[22px] font-extrabold leading-8 text-asa-ink">شرکت پتروشیمی جم</h3>
+              <p id="project-card-description" class="mt-3 text-sm xl:text-[13.5px] leading-7 text-slate-600 mb-4">در پروژه‌های پتروشیمی، هماهنگی میان فرایند، تجهیزات و زیرساخت نقش مهمی در عملکرد مجموعه دارد. این نمونه، بخشی از تجربه آساکاو در پروژه‌های حوزه نفت، گاز و پتروشیمی را معرفی می‌کند</p>
+              <button id="project-next" type="button" class="project-next-button">مشاهده پروژه‌های دیگر <span aria-hidden="true">←</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Certificates and professional credentials -->
+    <section
+      id="reputation"
+      class="reputation-section credential-redesign overflow-hidden bg-asa-navy py-16 md:py-20 xl:py-24 2xl:py-28"
+    >
+      <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+
+        <div class="credential-layout">
+
+          <!-- LEFT: Moving certificate carousel -->
+          <div class="credential-slider-column" data-reveal>
+            <div class="credential-slider" aria-label="گالری گواهینامه‌های آساکاو">
+
+              <button
+                class="credential-slider-card"
+                type="button"
+                data-credential-card="0"
+                data-position="active"
+                aria-pressed="true"
+                aria-label="نمایش گواهینامه صلاحیت خدمات مشاور"
+              >
+                <img
+                  src="./images/credential-consult.jpg"
+                  alt=""
+                  loading="eager"
+                >
+              </button>
+
+              <button
+                class="credential-slider-card"
+                type="button"
+                data-credential-card="1"
+                data-position="next"
+                aria-pressed="false"
+                aria-label="نمایش گواهینامه صلاحیت پیمانکاری"
+              >
+                <img
+                  src="./images/credential-contract.jpg"
+                  alt=""
+                  loading="lazy"
+                >
+              </button>
+
+              <button
+                class="credential-slider-card"
+                type="button"
+                data-credential-card="2"
+                data-position="last"
+                aria-pressed="false"
+                aria-label="نمایش گواهینامه ایمنی HSE"
+              >
+                <img
+                  src="./images/credential-hse.jpg"
+                  alt=""
+                  loading="lazy"
+                >
+              </button>
+
+              <!-- Carousel navigation -->
+              <div class="credential-slider-controls">
+                <button
+                  id="credential-prev"
+                  class="credential-slider-arrow"
+                  type="button"
+                  aria-label="گواهینامه قبلی"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+
+                <button
+                  id="credential-next"
+                  class="credential-slider-arrow"
+                  type="button"
+                  aria-label="گواهینامه بعدی"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 12h14m-7-7 7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: Section introduction and accordion -->
+          <div class="credential-content" data-reveal>
+
+            <p class="credential-kicker text-sm xl:text-base">
+              <span></span>
+              اعتبار و صلاحیت‌های رسمی
+            </p>
+
+            <h2 class="credential-heading text-3xl xl:text-[46px] 2xl:text-5xl leading-normal">
+              پشتوانه تخصص،
+              <br>
+              اعتبار حرفه‌ای.
+            </h2>
+
+            <p class="credential-intro">
+              گواهینامه‌ها و صلاحیت‌های آساکاو، بخشی از پشتوانه حرفه‌ای
+              ما در ارائه خدمات مهندسی و فعالیت در پروژه‌های صنعتی و عمرانی
+              هستند. با بخشی از این مستندات و حوزه‌های مرتبط با آن‌ها آشنا شوید.
+            </p>
+
+            <div class="credential-accordion" aria-label="گواهینامه‌ها و صلاحیت‌های آساکاو">
+
+              <!-- Item 1 -->
+              <div class="credential-accordion-item is-active">
+                <h3>
+                  <button
+                    class="credential-accordion-trigger"
+                    type="button"
+                    data-credential-trigger="0"
+                    aria-expanded="true"
+                    aria-controls="credential-panel-0"
+                  >
+                    <span class="credential-accordion-title">صلاحیت خدمات مشاور</span>
+                    <span class="credential-accordion-icon" aria-hidden="true">−</span>
+                  </button>
+                </h3>
+
+                <div
+                  id="credential-panel-0"
+                  class="credential-accordion-panel"
+                >
+                  <p>
+                    این مدرک بخشی از مستندات حرفه‌ای آساکاو در حوزه خدمات مشاوره
+                    و مهندسی است و برای معرفی توانمندی‌های تخصصی شرکت به کارفرمایان
+                    مورد استفاده قرار می‌گیرد.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="credential-accordion-item">
+                <h3>
+                  <button
+                    class="credential-accordion-trigger"
+                    type="button"
+                    data-credential-trigger="1"
+                    aria-expanded="false"
+                    aria-controls="credential-panel-1"
+                  >
+                    <span class="credential-accordion-title">صلاحیت پیمانکاری</span>
+                    <span class="credential-accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+
+                <div
+                  id="credential-panel-1"
+                  class="credential-accordion-panel"
+                  hidden
+                >
+                  <p>
+                    صلاحیت پیمانکاری در کنار سوابق اجرایی، بخشی از مستندات
+                    معرفی ظرفیت‌های آساکاو برای فعالیت در پروژه‌های صنعتی
+                    و عمرانی است.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="credential-accordion-item">
+                <h3>
+                  <button
+                    class="credential-accordion-trigger"
+                    type="button"
+                    data-credential-trigger="2"
+                    aria-expanded="false"
+                    aria-controls="credential-panel-2"
+                  >
+                    <span class="credential-accordion-title">ایمنی و HSE</span>
+                    <span class="credential-accordion-icon" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+
+                <div
+                  id="credential-panel-2"
+                  class="credential-accordion-panel"
+                  hidden
+                >
+                  <p>
+                    این گواهینامه در مجموعه مستندات مرتبط با ایمنی و HSE قرار
+                    دارد؛ حوزه‌ای مهم برای فعالیت مسئولانه در محیط‌های صنعتی
+                    و پروژه‌ای.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <a
+              class="btn-primary credential-catalog-link"
+              href="https://asa-eng.com/online-catalog/"
+            >
+              آشنایی با توانمندی‌ها
+              <span aria-hidden="true">←</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- News & Editorial — refined editorial layout -->
+    <section id="news" class="border-y border-slate-100 bg-white py-16 md:py-24">
+      <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+
+        <!-- Section introduction -->
+        <header
+          class="mb-10 grid grid-cols-1 gap-5 md:mb-14 md:grid-cols-2 md:gap-8"
+          data-reveal
+        >
+          <div>
+            <h2 class="mt-3 text-3xl font-extrabold leading-tight text-asa-ink md:text-[48px] 2xl:text-5xl">
+              تازه‌های آساکاو
+            </h2>
+            <p class="max-w-2xl mt-5 text-sm leading-8 text-slate-600 md:text-base md:leading-9 xl:text-lg">
+              خبرها، تحلیل‌ها و دیدگاه‌های آساکاو درباره صنعت، انرژی و زیرساخت؛
+              نگاهی به تحولات روز، چالش‌های مهندسی و فرصت‌هایی که مسیر توسعه
+              پروژه‌های صنعتی و عمرانی را شکل می‌دهند.
+            </p>
+          </div>
+
+          <div class="place-self-end ml-32 mb-3">
+            <a
+              class="btn-primary shrink-0 text-base"
+              href="https://asa-eng.com/%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA/"
+            >
+              مشاهده همه اخبار
+              <span aria-hidden="true">←</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Featured story: 1/3 | Supporting stories: 2/3 -->
+        <div
+          class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.28fr)_minmax(0,1.72fr)] lg:gap-10 xl:gap-14"
+          data-reveal
+        >
+
+          <!-- Featured article -->
+          <article class="min-w-0 pb-8 lg:pb-0">
+
+            <a
+              class="group relative block aspect-[16/10] overflow-hidden bg-asa-pale"
+              href="https://asa-eng.com/%D8%AA%D9%86%D9%87%D8%A7-%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1-%D8%B1%D9%81%D8%B9-%D9%86%D8%A7%D8%AA%D8%B1%D8%A7%D8%B2%DB%8C-%D9%85%D8%B4%D8%A7%D8%B1%DA%A9%D8%AA-%D8%A8%D8%AE%D8%B4-%D8%AE%D8%B5%D9%88/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="مطالعه مطلب درباره مشارکت بخش خصوصی در صنعت نفت و نیرو"
+            >
+              <img
+                src="https://asa-eng.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-11-at-1.59.41-PM.jpeg"
+                data-fallback="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=80"
+                alt="صنعت انرژی و زیرساخت"
+                loading="lazy"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+              >
+
+              <!-- Featured label -->
+              <span class="absolute right-4 top-4 inline-flex items-center gap-2 bg-white/95 px-3 py-2 text-xs font-bold text-asa-ink shadow-sm backdrop-blur-sm md:right-5 md:top-5">
+                <span class="h-1.5 w-1.5 rounded-full bg-asa-orange"></span>
+                مطلب منتخب
+              </span>
+
+              <!-- Image overlay -->
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-asa-ink/10 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+              ></span>
+            </a>
+
+            <div class="flex flex-col pt-5 md:pt-6">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-slate-500">
+                <span class="inline-flex items-center bg-orange-50 px-3 py-1.5 font-bold text-asa-orange">
+                  یادداشت انرژی
+                </span>
+
+                <span aria-hidden="true" class="h-1 w-1 rounded-full bg-slate-300"></span>
+
+                <time>۱۱ فوریه ۲۰۲۵</time>
+              </div>
+
+              <h3 class="mt-4 text-xl font-extrabold leading-9 text-asa-ink md:mt-5 md:text-2xl md:leading-10">
+                <a
+                  class="transition-colors duration-300 hover:text-asa-orange"
+                  href="https://asa-eng.com/%D8%AA%D9%86%D9%87%D8%A7-%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1-%D8%B1%D9%81%D8%B9-%D9%86%D8%A7%D8%AA%D8%B1%D8%A7%D8%B2%DB%8C-%D9%85%D8%B4%D8%A7%D8%B1%DA%A9%D8%AA-%D8%A8%D8%AE%D8%B4-%D8%AE%D8%B5%D9%88/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  تنها راهکار رفع ناترازی، مشارکت بخش خصوصی در حوزه نفت و نیروست
+                </a>
+              </h3>
+
+              <p class="mt-3 text-sm leading-8 text-slate-600 md:text-base">
+                نگاهی به چالش ناترازی انرژی و نقش سرمایه‌گذاری بخش خصوصی
+                در تقویت زیرساخت‌ها و کمک به توسعه پایدار صنعت نفت و نیرو.
+              </p>
+
+              <a
+                class="text-link mt-5 w-fit"
+                href="https://asa-eng.com/%D8%AA%D9%86%D9%87%D8%A7-%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1-%D8%B1%D9%81%D8%B9-%D9%86%D8%A7%D8%AA%D8%B1%D8%A7%D8%B2%DB%8C-%D9%85%D8%B4%D8%A7%D8%B1%DA%A9%D8%AA-%D8%A8%D8%AE%D8%B4-%D8%AE%D8%B5%D9%88/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                مطالعه مطلب
+                <span aria-hidden="true">←</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Supporting articles: 2/3 width -->
+          <div
+            class="min-w-0
+                  lg:pr-2
+                  [&>article]:border-t
+                  [&>article]:border-slate-200
+                  [&>article]:py-7
+                  lg:[&>article]:py-8
+                  lg:[&>article:first-child]:border-t-0
+                  lg:[&>article:first-child]:pt-0
+                  lg:[&>article:last-child]:pb-0"
+          >
+
+            <!-- Article 2 -->
+            <article class="group/article relative border-r-2 border-transparent pr-4 transition-colors duration-300 hover:border-asa-orange lg:pr-5">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-slate-500">
+                <span class="inline-flex items-center bg-orange-50 px-3 py-1.5 font-bold text-asa-orange">
+                  مقاله
+                </span>
+
+                <span aria-hidden="true" class="h-1 w-1 rounded-full bg-slate-300"></span>
+
+                <time>۱ سپتامبر ۲۰۲۴</time>
+              </div>
+
+              <h3 class="mt-3 text-lg font-extrabold leading-8 text-asa-ink md:text-xl md:leading-9">
+                <a
+                  class="group/title inline-flex items-baseline gap-2 transition-colors duration-300 hover:text-asa-orange"
+                  href="https://asa-eng.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>امید به آینده‌ای روشن برای صنعت نفت و گاز ایران</span>
+                  <span
+                    aria-hidden="true"
+                    class="inline-block shrink-0 text-sm text-asa-orange opacity-0 transition-all duration-300 group-hover/title:translate-x-[-3px] group-hover/title:opacity-100"
+                  >←</span>
+                </a>
+              </h3>
+
+              <p class="mt-2 line-clamp-2 text-sm leading-7 text-slate-600">
+                چشم‌انداز توسعه و تقویت ظرفیت‌های صنعت انرژی و مسیرهای پیش‌روی
+                این بخش در پاسخ به نیازهای آینده.
+              </p>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="group/article relative border-r-2 border-transparent pr-4 transition-colors duration-300 hover:border-asa-orange lg:pr-5">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-slate-500">
+                <span class="inline-flex items-center bg-orange-50 px-3 py-1.5 font-bold text-asa-orange">
+                  دیدگاه
+                </span>
+
+                <span aria-hidden="true" class="h-1 w-1 rounded-full bg-slate-300"></span>
+
+                <time>۱۴ آگوست ۲۰۲۴</time>
+              </div>
+
+              <h3 class="mt-3 text-lg font-extrabold leading-8 text-asa-ink md:text-xl md:leading-9">
+                <a
+                  class="group/title inline-flex items-baseline gap-2 transition-colors duration-300 hover:text-asa-orange"
+                  href="https://asa-eng.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>نفت، گاز و نیرو؛ چالش‌ها و فرصت‌های پیش‌رو</span>
+                  <span
+                    aria-hidden="true"
+                    class="inline-block shrink-0 text-sm text-asa-orange opacity-0 transition-all duration-300 group-hover/title:translate-x-[-3px] group-hover/title:opacity-100"
+                  >←</span>
+                </a>
+              </h3>
+
+              <p class="mt-2 line-clamp-2 text-sm leading-7 text-slate-600">
+                مروری بر چالش‌های صنعت انرژی و فرصت‌های پیش‌رو برای توسعه،
+                بهبود زیرساخت‌ها و تقویت توان مهندسی.
+              </p>
+            </article>
+
+
+            <!-- Article 4: Steel Exhibition -->
+            <article class="group/article relative border-r-2 border-transparent pr-4 transition-colors duration-300 hover:border-asa-orange lg:pr-5">
+
+              <!-- Category -->
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-slate-500">
+                <span class="inline-flex items-center bg-orange-50 px-3 py-1.5 font-bold text-asa-orange">
+                  نمایشگاه
+                </span>
+                <span aria-hidden="true" class="h-1 w-1 rounded-full bg-slate-300"></span>
+
+                <time>۱۴ آگوست ۲۰۲۴</time>
+              </div>
+
+              <!-- Title -->
+              <h3 class="mt-3 text-lg font-extrabold leading-8 text-asa-ink transition-colors duration-300 group-hover/article:text-asa-orange md:text-xl md:leading-9">
+                نمایشگاه بین المللی صنعت فولاد جزیره کیش معوقه اسفند 1398
+              </h3>
+
+              <!-- Supporting subtitle -->
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                غرفه شرکت در نمایشگاه بین المللی فولاد جزیره کیش 1398
+              </p>
+
+            </article>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contact CTA — immersive, image-led editorial style -->
+    <section
+      id="contact"
+      class="relative isolate flex min-h-[460px] items-center justify-center overflow-hidden bg-asa-deep py-8 text-white sm:min-h-[480px] sm:py-10 md:min-h-[600px] md:py-20 xl:min-h-[640px]"
+    >
+      <!-- Background image: fills the entire section and zooms on mobile -->
+      <img
+        src="./images/contact.jfif"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        class="absolute inset-0 -z-20 h-full w-full scale-[1.22] object-cover object-[58%_center] sm:scale-[1.12] md:scale-100 md:object-center"
+      >
+
+      <!-- Lighter overlay to let more of the image show through -->
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 bg-gradient-to-b from-asa-deep/35 via-asa-deep/45 to-asa-deep/75"
+      ></div>
+
+      <!-- Subtle brand accent -->
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-asa-orange/10 blur-[100px] md:h-[460px] md:w-[460px]"
+      ></div>
+
+      <!-- Main content -->
+      <div
+        class="mx-auto w-full max-w-[1900px] px-5 text-center md:px-8 2xl:px-14"
+        data-reveal
+      >
+        <h2
+          class="mx-auto mt-4 max-w-5xl text-3xl font-extrabold leading-[1.4] tracking-tight text-white sm:text-4xl md:mt-9 md:text-6xl md:leading-[1.3] xl:text-7xl"
+        >
+          پروژه بعدی را
+          <br>
+          با هم
+          <span class="text-asa-orange">بسازیم.</span>
+        </h2>
+
+        <p
+          class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/85 md:mt-8 md:text-lg md:leading-9 xl:text-xl 2xl:text-2xl"
+        >
+          هر پروژه با یک گفت‌وگو آغاز می‌شود.
+          برای بررسی نیازها، شناخت فرصت‌ها و یافتن راهکار مهندسی مناسب،
+          با آساکاو در ارتباط باشید.
+        </p>
+
+        <!-- Email CTA -->
+        <div class="mt-7 flex flex-col items-center gap-5 md:mt-10">
+          <a
+            href="mailto:info@asa-eng.com"
+            class="group inline-flex min-h-14 items-center gap-5 border border-white/40 bg-white/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-asa-orange hover:bg-asa-orange md:px-8 md:text-base xl:text-lg"
+          >
+            <span dir="ltr">info@asa-eng.com</span>
+
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="transition-transform duration-300 group-hover:-translate-x-1 group-hover:translate-y-1"
+            >
+              <path
+                d="M7 7L17 17M17 17V7M17 17H7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="tel:+983132730183"
+            class="mt-1 text-sm text-white/75 transition-colors duration-300 hover:text-white md:mt-2 xl:text-base"
+            dir="rtl"
+          >
+            یا با ما تماس بگیرید:
+            <span class="mr-1 font-semibold text-white" dir="ltr">
+              031 32730183–87
+            </span>
+          </a>
+        </div>
+
+        <!-- Minimal closing accent -->
+        <div
+          aria-hidden="true"
+          class="mx-auto mt-5 h-px w-16 bg-asa-orange/80 md:mt-8"
+        ></div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- Footer — Asakāv -->
+  <footer class="border-t-4 border-asa-orange bg-[#091a2a] pt-14 text-white md:pt-[72px]">
+    <div class="mx-auto max-w-[1900px] px-5 md:px-8 2xl:px-14">
+
+      <!-- Main footer grid -->
+      <div class="grid grid-cols-1 gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_.7fr] lg:gap-12 xl:gap-16">
+
+        <!-- Brand -->
+        <div class="min-w-0 mr-4">
+          <a href="#home" class="inline-flex items-center gap-3">
+            <img
+              src="/images/logo.png"
+              alt="آساکاو"
+              class="h-12 w-auto max-w-[76px] object-contain"
+              loading="lazy"
+            >
+
+            <span class="flex flex-col">
+              <strong class="text-2xl font-black tracking-tight">آساکاو</strong>
+              <small class="mt-1 text-[11px] leading-6 text-white/60">
+                مشاور و پیمانکار پروژه‌های صنعتی و عمرانی
+              </small>
+            </span>
+          </a>
+
+          <p class="mt-6 text-sm leading-8 text-white/65">
+            دانش مهندسی. تعهد حرفه‌ای.
+            <br>
+            نگاهی رو به آینده.
+          </p>
+        </div>
+
+        <!-- Isfahan office -->
+        <div>
+          <h3 class="text-base font-bold text-white">
+            دفتر مرکزی ـ اصفهان
+          </h3>
+
+          <p class="mt-4 text-sm leading-8 text-white/65">
+            خیابان هشت‌بهشت غربی، حدفاصل خیابان نشاط و خیابان ملک،
+            ساختمان آساکاو
+          </p>
+
+          <a
+            href="tel:+983132730183"
+            dir="ltr"
+            class="mt-3 block w-fit text-sm text-white/85 transition-colors hover:text-asa-orange"
+          >
+            031 32730183–87
+          </a>
+
+          <span class="mt-2 block text-sm text-white/50">
+            فکس: داخلی ۱۲۰
+          </span>
+        </div>
+
+        <!-- Tehran office -->
+        <div>
+          <h3 class="text-base font-bold text-white">
+            دفتر تهران
+          </h3>
+
+          <p class="mt-4 text-sm leading-8 text-white/65">
+            سعادت‌آباد، خیابان علامه طباطبایی جنوبی،
+            ساختمان علامه، طبقه پنجم، واحد ۶
+          </p>
+
+          <a
+            href="tel:+982188687213"
+            dir="ltr"
+            class="mt-3 block w-fit text-sm text-white/85 transition-colors hover:text-asa-orange"
+          >
+            021 88687213
+          </a>
+
+          <span class="mt-3 block text-sm leading-7 text-white/50">
+            شنبه تا چهارشنبه: ۸ تا ۱۷
+            <br>
+            پنج‌شنبه: ۸ تا ۱۳
+          </span>
+        </div>
+
+        <!-- Quick links -->
+        <nav aria-label="دسترسی سریع">
+          <h3 class="text-base font-bold text-white">
+            دسترسی سریع
+          </h3>
+
+          <div class="mt-4 flex flex-col items-start gap-4 text-sm text-white/65">
+
+            <a
+              href="#industries"
+              class="group inline-flex items-center gap-2 transition-colors hover:text-asa-orange"
+            >
+              حوزه‌های فعالیت
+            </a>
+
+            <a
+              href="https://asa-eng.com/portfolio/"
+              class="group inline-flex items-center gap-2 transition-colors hover:text-asa-orange"
+            >
+              پروژه‌ها
+            </a>
+
+            <a
+              href="https://asa-eng.com/about/certificate/"
+              class="group inline-flex items-center gap-2 transition-colors hover:text-asa-orange"
+            >
+              گواهینامه‌ها
+            </a>
+
+            <a
+              href="https://asa-eng.com/online-catalog/"
+              class="group inline-flex items-center gap-2 transition-colors hover:text-asa-orange"
+            >
+              کاتالوگ شرکت
+
+              <svg
+                class="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-0.5 group-hover:translate-y-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.35"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M18 6H6v12M6 6l12 12"></path>
+              </svg>
+            </a>
+
+          </div>
+        </nav>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="flex flex-col gap-5 border-t border-white/15 py-5 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+
+        <span class="leading-7">
+          تمامی حقوق این وب‌سایت متعلق به شرکت طرح و ساخت آساکاو است.
+        </span>
+
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="certificate-dialog" class="certificate-dialog"><form method="dialog"><button class="dialog-close" aria-label="بستن">×</button><img id="certificate-dialog-image" src="" alt="نمایش گواهینامه"><p id="certificate-dialog-caption"></p></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./script.js"></script>
+  <script src="./projects-section.js"></script>
+  <script>
+  (() => {
+    const section = document.querySelector('.credential-redesign');
+    if (!section) return;
+
+    const cards = Array.from(
+      section.querySelectorAll('[data-credential-card]')
+    );
+
+    const triggers = Array.from(
+      section.querySelectorAll('[data-credential-trigger]')
+    );
+
+    const previousButton = section.querySelector('#credential-prev');
+    const nextButton = section.querySelector('#credential-next');
+    const activeNumber = section.querySelector('#credential-active-number');
+    const slider = section.querySelector('.credential-slider');
+
+    if (!cards.length || cards.length !== triggers.length) return;
+
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    let activeIndex = 0;
+    let autoplayTimer = null;
+    let isPaused = false;
+
+    const persianDigits = value =>
+      String(value).replace(/\d/g, digit => '۰۱۲۳۴۵۶۷۸۹'[Number(digit)]);
+
+    function setActive(index) {
+      activeIndex = (index + cards.length) % cards.length;
+
+      cards.forEach((card, cardIndex) => {
+        const relativePosition =
+          (cardIndex - activeIndex + cards.length) % cards.length;
+
+        const position =
+          relativePosition === 0
+            ? 'active'
+            : relativePosition === 1
+              ? 'next'
+              : 'last';
+
+        card.dataset.position = position;
+        card.setAttribute(
+          'aria-pressed',
+          String(relativePosition === 0)
+        );
+      });
+
+      triggers.forEach((trigger, triggerIndex) => {
+        const active = triggerIndex === activeIndex;
+        const item = trigger.closest('.credential-accordion-item');
+        const panelId = trigger.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+        const icon = trigger.querySelector('.credential-accordion-icon');
+
+        trigger.setAttribute('aria-expanded', String(active));
+
+        if (item) item.classList.toggle('is-active', active);
+        if (panel) panel.hidden = !active;
+        if (icon) icon.textContent = active ? '−' : '+';
+      });
+
+      if (activeNumber) {
+        activeNumber.textContent = persianDigits(
+          String(activeIndex + 1).padStart(2, '0')
+        );
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer !== null) {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+
+      if (reducedMotion) return;
+
+      autoplayTimer = window.setInterval(() => {
+        if (!isPaused) {
+          setActive(activeIndex + 1);
+        }
+      }, 3200);
+    }
+
+    function selectManually(index) {
+      setActive(index);
+      startAutoplay();
+    }
+
+    cards.forEach((card, index) => {
+      card.addEventListener('click', () => {
+        selectManually(index);
+      });
+    });
+
+    triggers.forEach((trigger, index) => {
+      trigger.addEventListener('click', () => {
+        selectManually(index);
+      });
+    });
+
+    previousButton?.addEventListener('click', () => {
+      selectManually(activeIndex - 1);
+    });
+
+    nextButton?.addEventListener('click', () => {
+      selectManually(activeIndex + 1);
+    });
+
+    // Pause while the user explores the section.
+    section.addEventListener('mouseenter', () => {
+      isPaused = true;
+    });
+
+    section.addEventListener('mouseleave', () => {
+      isPaused = false;
+    });
+
+    section.addEventListener('focusin', () => {
+      isPaused = true;
+    });
+
+    section.addEventListener('focusout', event => {
+      if (!section.contains(event.relatedTarget)) {
+        isPaused = false;
+      }
+    });
+
+    setActive(0);
+    startAutoplay();
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,575 @@
+/* Project section only — load after style.css. */
+.projects-section {
+  background: #fff !important;
+  position: relative;
+}
+
+.projects-section .project-map-layout {
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .projects-section .project-map-layout {
+    grid-template-columns: minmax(0, 1fr) 370px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .projects-section .project-map-layout {
+    grid-template-columns: minmax(0, 1fr) 390px;
+    gap: 1.5rem;
+  }
+}
+
+.project-map-stage {
+  isolation: isolate;
+  position: relative;
+  min-width: 0;
+  border: 1px solid #dfe8eb;
+  background: #f8fbfa;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .88);
+}
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .75;
+  background-color: #f8fbfa;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(214, 229, 216, .22), transparent 26%),
+    radial-gradient(ellipse at 78% 70%, rgba(230, 218, 190, .22), transparent 28%);
+  background-repeat: no-repeat;
+}
+
+.iran-project-map {
+  overflow: visible;
+}
+
+.iran-project-map path {
+  vector-effect: non-scaling-stroke;
+}
+
+/* Full regional shaded relief is shown without clipping so coastlines and sea shapes remain natural. */
+.iran-terrain-image {
+  pointer-events: none;
+}
+
+.iran-terrain-source {
+  opacity: 1;
+  image-rendering: auto;
+}
+
+.map-context-label {
+  fill: #88958b;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1px;
+}
+
+.map-water-label {
+  fill: #4f879d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.terrain-contour {
+  fill: none;
+  stroke: #a18b67;
+  stroke-width: 1.15;
+  opacity: .27;
+}
+
+.map-project-point {
+  cursor: pointer;
+  outline: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.map-pin-shadow {
+  fill: rgba(17, 42, 55, .18);
+  transform: translate(1.5px, 2.5px);
+}
+
+.map-pin-shape {
+  fill: #ef7f29;
+  stroke: #fff;
+  stroke-width: 2.1;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 2px rgba(17, 42, 55, .16));
+  transition: fill .2s ease, stroke-width .2s ease;
+}
+
+.map-pin-center {
+  fill: #fff;
+  stroke: rgba(128, 71, 30, .45);
+  stroke-width: 1;
+}
+
+.map-project-point.active .map-pin-shape,
+.map-project-point:focus-visible .map-pin-shape {
+  fill: #123e61;
+  stroke-width: 2.5;
+}
+
+.map-project-point.active .map-pin-center {
+  fill: #ef7f29;
+  stroke: #fff;
+}
+
+.map-project-point:focus-visible .map-pin-shape {
+  stroke: #ef7f29;
+  stroke-width: 3.5;
+}
+
+.map-project-label {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  fill: #274638;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, .96);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  dominant-baseline: hanging;
+}
+
+.map-legend {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border: 1px solid rgba(218, 230, 236, .98);
+  background: rgba(255, 255, 255, .95);
+  color: #36536a;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(8, 45, 85, .06);
+}
+
+
+.map-source-credit {
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  max-width: calc(100% - 210px);
+  color: #7d8c90;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: right;
+  opacity: .85;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.map-source-credit:hover,
+.map-source-credit:focus-visible {
+  color: #385d6d;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.map-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef7f29;
+  box-shadow: 0 0 0 4px rgba(239, 127, 41, .13);
+}
+
+.project-map-card {
+  min-width: 0;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 14px 38px rgba(8, 45, 85, .085);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.project-map-card:hover {
+  box-shadow: 0 18px 46px rgba(8, 45, 85, .12);
+}
+
+.project-card-image {
+  position: relative;
+  flex-shrink: 0;
+  height: 220px;
+  background: #e8ece3;
+}
+
+.project-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(8, 35, 55, .24), transparent 42%, rgba(8, 35, 55, .12));
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.project-map-card:hover .project-card-image img {
+  transform: scale(1.025);
+}
+
+.project-card-content {
+  min-width: 0;
+}
+
+.project-card-overline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d96d20;
+  font-weight: 800;
+}
+
+.project-card-overline span {
+  display: inline-block;
+  width: 19px;
+  height: 2px;
+  background: #ef7f29;
+}
+
+.project-card-facts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.project-fact {
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dce7f0;
+  background: #edf3f8;
+}
+
+.project-fact-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #627d94;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.project-fact strong {
+  display: block;
+  color: #123e61;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.project-next-button {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px 0 2px;
+  border: 0;
+  border-top: 1px solid #dce7ef;
+  background: transparent;
+  color: #123e61;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 800;
+  transition: color .2s ease;
+}
+
+.project-next-button span {
+  color: #ef7f29;
+  font-size: 17px;
+  transition: transform .2s ease;
+}
+
+.project-next-button:hover {
+  color: #ef7f29;
+}
+
+.project-next-button:hover span {
+  transform: translateX(-3px);
+}
+
+.project-next-button:focus-visible {
+  outline: 2px solid #ef7f29;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1023px) {
+  .project-map-stage {
+    min-height: 480px;
+  }
+
+  .project-map-card {
+    display: grid;
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    min-height: 300px;
+  }
+
+  .project-card-image {
+    height: 100%;
+    min-height: 300px;
+  }
+
+  .project-card-content {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .project-map-stage {
+    min-height: 360px;
+  }
+
+  .map-context-label {
+    font-size: 14px;
+  }
+
+  .map-project-label {
+    font-size: 14px;
+    stroke-width: 4.5px;
+  }
+
+  .map-legend {
+    left: 10px;
+    bottom: 10px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .map-source-credit {
+    right: 9px;
+    bottom: 8px;
+    max-width: calc(100% - 180px);
+    font-size: 7px;
+  }
+
+  .project-map-card {
+    display: flex;
+    min-height: 0;
+  }
+
+  .project-card-image {
+    height: 205px;
+    min-height: 205px;
+  }
+
+  .project-card-content {
+    padding: 21px;
+  }
+
+  .project-card-facts {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .project-fact {
+    padding: 11px 10px;
+  }
+
+  .project-fact strong {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-map-card,
+  .project-card-image img,
+  .map-point-halo,
+  .project-next-button span {
+    transition: none !important;
+  }
+}
+
+
+/* ========================================
+   Project map — full-height, softly blended
+======================================== */
+
+.projects-section .project-map-stage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(248, 251, 250, 0.12) 0%,
+      rgba(226, 237, 225, 0.2) 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      90deg,
+      #dce9dd 0%,
+      #edf3eb 13%,
+      #f8fbfa 31%,
+      #f8fbfa 69%,
+      #edf3eb 87%,
+      #dce9dd 100%
+    );
+}
+
+/* Let the soft background show through around the terrain. */
+.projects-section .map-grid {
+  background-color: transparent;
+  opacity: 1;
+  background-image:
+    radial-gradient(
+      ellipse at 20% 20%,
+      rgba(214, 229, 216, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 78% 70%,
+      rgba(230, 218, 190, 0.16),
+      transparent 32%
+    );
+}
+
+/* Gently fade the terrain image at both horizontal edges. */
+.projects-section .iran-terrain-image {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 7%,
+    #000 18%,
+    #000 82%,
+    rgba(0, 0, 0, 0.3) 93%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 7%,
+    #000 18%,
+    #000 82%,
+    rgba(0, 0, 0, 0.3) 93%,
+    transparent 100%
+  );
+}
+
+/* Desktop: fit the SVG to the full height without distorting the map. */
+@media (min-width: 1024px) {
+  .projects-section .iran-project-map {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+
+    height: 558.4px;
+    width: auto;
+    max-width: none;
+
+    display: block;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .projects-section .map-legend,
+  .projects-section .map-source-credit {
+    z-index: 2;
+  }
+}
+
+
+/* ========================================
+   Project section — balanced desktop height
+======================================== */
+
+@media (min-width: 1024px) {
+  .projects-section .project-map-layout {
+    align-items: start;
+  }
+
+  .projects-section .project-map-stage,
+  .projects-section .project-map-card {
+    height: 492.4px;
+    min-height: 0;
+  }
+
+  .projects-section .project-map-card {
+    align-self: start;
+  }
+}
+
+
+/* ========================================
+   Project card — image-led editorial layout
+======================================== */
+
+/* Remove the two small fact cards visually. */
+.projects-section .project-card-facts {
+  display: none !important;
+}
+
+/* Keep the card aligned with the map on desktop. */
+@media (min-width: 1024px) {
+  .projects-section .project-map-card {
+    display: flex;
+    flex-direction: column;
+    height: 492.4px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* Give the project image more presence. */
+  .projects-section .project-card-image {
+    flex: 0 0 244px;
+    height: 244px;
+    min-height: 244px;
+  }
+
+  /* Use the space freed by removing the fact cards. */
+  .projects-section .project-card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding: 17px 22px 15px;
+  }
+
+  .projects-section #project-card-description {
+    margin-top: 7px;
+    color: #526b79;
+    line-height: 2;
+    overflow-wrap: anywhere;
+  }
+
+  /* Keep the navigation comfortably at the bottom. */
+  .projects-section .project-next-button {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 11px;
+  }
+}
+
+/* Keep the image-led layout comfortable on smaller screens. */
+@media (max-width: 1023px) {
+  .projects-section .project-card-image {
+    flex-shrink: 0;
+  }
+
+  .projects-section #project-card-description {
+    line-height: 2;
+  }
+}

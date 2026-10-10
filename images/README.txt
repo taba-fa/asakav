@@ -1,0 +1,1 @@
+Optional: copy the existing Asakaw image assets into this folder. See the root README.md for the filenames referenced by the static prototype. Remote fallbacks keep the preview usable when local files are absent.
